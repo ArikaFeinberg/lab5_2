@@ -5,8 +5,9 @@ node_js:
 - node
 script:
  - npm run lint 
+- npm run deploy
 after_success:
- - npm run deploy
+ 
  provider: firebase
   project: project12-a6cfa
   token: $FIREBASE_TOKEN
