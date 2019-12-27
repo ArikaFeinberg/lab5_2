@@ -4,4 +4,11 @@ sudo: false
 node_js:
 - node
 script:
- - npm run lint
+ - npm run lint 
+after_success:
+ - npm run deploy
+ provider: firebase
+  project: project12-a6cfa
+  token: $FIREBASE_TOKEN
+notifications:
+ email: false
