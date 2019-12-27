@@ -1,0 +1,36 @@
+{
+  "name": "lab5_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-mfe": "^0.1.2",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.19.1",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "lint": "npx eslint --fix .",
+    "deploy": "npx firebase deploy --token $FIREBASE_TOKEN"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx prettier index.js --write"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArikaFeinberg/lab5_2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArikaFeinberg/lab5_2/issues"
+  },
+  "homepage": "https://github.com/ArikaFeinberg/lab5_2#readme"
+}
